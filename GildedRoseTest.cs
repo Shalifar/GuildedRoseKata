@@ -346,5 +346,63 @@ namespace csharp
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
         }
+
+        [TestFixture]
+        public class ConjuredItemTests
+        {
+            [Test]
+            public void ConjuredItem_SellInDecreases()
+            {
+                IList<Item> Item = new List<Item>
+            {
+                new Item { Name = "Conjured Robe", SellIn = 3, Quality = 7 }
+            };
+
+                IList<Item> ExpectedItem = new List<Item>
+            {
+                new Item { Name = "Conjured Robe", SellIn = 2, Quality = 5 }
+            };
+
+                GildedRose app = new GildedRose(Item);
+                app.UpdateQuality();
+                Assert.AreEqual(ExpectedItem[0].SellIn, Item[0].SellIn);
+            }
+
+            [Test]
+            public void ConjuredItem_SellInNotPassed_QualityDecreasedBy2()
+            {
+                IList<Item> Item = new List<Item>
+            {
+                new Item { Name = "Conjured Robe", SellIn = 3, Quality = 7 }
+            };
+
+                IList<Item> ExpectedItem = new List<Item>
+            {
+                new Item { Name = "Conjured Robe", SellIn = 2, Quality = 5 }
+            };
+
+                GildedRose app = new GildedRose(Item);
+                app.UpdateQuality();
+                Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
+            }
+
+            [Test]
+            public void ConjuredItem_SellInPassed_QualityDecreasedBy4()
+            {
+                IList<Item> Item = new List<Item>
+            {
+                new Item { Name = "Conjured Robe", SellIn = 0, Quality = 7 }
+            };
+
+                IList<Item> ExpectedItem = new List<Item>
+            {
+                new Item { Name = "Conjured Robe", SellIn = -1, Quality = 3 }
+            };
+
+                GildedRose app = new GildedRose(Item);
+                app.UpdateQuality();
+                Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
+            }
+        }
     }
 }
