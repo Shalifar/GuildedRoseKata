@@ -21,7 +21,7 @@ namespace csharp
                 switch(item.Name)
                 {
                     case "Aged Brie":
-                        
+                        _itemUpdater.SetUpdateStrategy(new AgedBrieUpdater());
                         break;
                     default:
                         _itemUpdater.SetUpdateStrategy(new BasicUpdater());
