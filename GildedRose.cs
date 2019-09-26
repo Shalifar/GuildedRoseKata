@@ -23,6 +23,9 @@ namespace csharp
                     case "Aged Brie":
                         _itemUpdater.SetUpdateStrategy(new AgedBrieUpdater());
                         break;
+                    case "Sulfuras, Hand of Ragnaros":
+                        _itemUpdater.SetUpdateStrategy(new SulfurasUpdater());
+                        break;
                     default:
                         _itemUpdater.SetUpdateStrategy(new BasicUpdater());
                         break;
