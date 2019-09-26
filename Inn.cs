@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace csharp
 {
-    public interface IGildedRose
+    //The idea is that there may be multiple different inns
+    public interface Inn
     {
         void UpdateQuality();
     }

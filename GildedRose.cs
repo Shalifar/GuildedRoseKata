@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace csharp
 {
-    public class GildedRose : IGildedRose
+    public class GildedRose : Inn
     {
         IList<Item> Items;
         private readonly ItemUpdater _itemUpdater;
