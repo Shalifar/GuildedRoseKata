@@ -21,15 +21,15 @@ namespace csharp
                 //Not switch in order to use Contains
 
                 //It is not stated, but if the List is big, it may be worth to group it by name, in this case it is not worth it though
-                if(item.Name == "Aged Brie")
+                if (item.Name == "Aged Brie")
                 {
                     _itemUpdater.SetUpdateStrategy(new AgedBrieUpdater());
                 }
-                else if (item.Name == "Sulfuras, Hand of Ragnaros")
+                else if (item.Name.Contains("Sulfuras"))
                 {
                     _itemUpdater.SetUpdateStrategy(new SulfurasUpdater());
                 }
-                else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
+                else if (item.Name.Contains("Backstage passes"))
                 {
                     _itemUpdater.SetUpdateStrategy(new BackstagePassesUpdater());
                 }
