@@ -18,17 +18,22 @@ namespace csharp
         {
             foreach(var item in Items)
             {
-                switch(item.Name)
+                //Not switch in order to use StartsWith
+                if(item.Name == "Aged Brie")
                 {
-                    case "Aged Brie":
-                        _itemUpdater.SetUpdateStrategy(new AgedBrieUpdater());
-                        break;
-                    case "Sulfuras, Hand of Ragnaros":
-                        _itemUpdater.SetUpdateStrategy(new SulfurasUpdater());
-                        break;
-                    default:
-                        _itemUpdater.SetUpdateStrategy(new BasicUpdater());
-                        break;
+                    _itemUpdater.SetUpdateStrategy(new AgedBrieUpdater());
+                }
+                else if (item.Name == "Sulfuras, Hand of Ragnaros")
+                {
+                    _itemUpdater.SetUpdateStrategy(new SulfurasUpdater());
+                }
+                else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
+                {
+                    _itemUpdater.SetUpdateStrategy(new BackstagePassesUpdater());
+                }
+                else
+                {
+                    _itemUpdater.SetUpdateStrategy(new BasicUpdater());
                 }
 
                 _itemUpdater.Update(item);

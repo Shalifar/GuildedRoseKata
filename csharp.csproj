@@ -68,6 +68,7 @@
     <Compile Include="IGildedRose.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="UpdateServices\AgedBrieUpdater.cs" />
+    <Compile Include="UpdateServices\BackstagePassesUpdater.cs" />
     <Compile Include="UpdateServices\BasicUpdater.cs" />
     <Compile Include="UpdateServices\ItemUpdater.cs" />
     <Compile Include="UpdateServices\SulfurasUpdater.cs" />
