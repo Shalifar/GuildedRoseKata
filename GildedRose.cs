@@ -2,7 +2,7 @@
 
 namespace csharp
 {
-    public class GildedRose
+    public class GildedRose : IGildedRose
     {
         IList<Item> Items;
         public GildedRose(IList<Item> Items)
