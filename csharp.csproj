@@ -70,6 +70,7 @@
     <Compile Include="UpdateServices\AgedBrieUpdater.cs" />
     <Compile Include="UpdateServices\BackstagePassesUpdater.cs" />
     <Compile Include="UpdateServices\BasicUpdater.cs" />
+    <Compile Include="UpdateServices\ConjuredItemUpdater.cs" />
     <Compile Include="UpdateServices\ItemUpdater.cs" />
     <Compile Include="UpdateServices\SulfurasUpdater.cs" />
     <Compile Include="UpdateServices\UpdateStrategy.cs" />

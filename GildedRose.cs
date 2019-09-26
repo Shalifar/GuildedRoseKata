@@ -18,7 +18,9 @@ namespace csharp
         {
             foreach(var item in Items)
             {
-                //Not switch in order to use StartsWith
+                //Not switch in order to use Contains
+
+                //It is not stated, but if the List is big, it may be worth to group it by name, in this case it is not worth it though
                 if(item.Name == "Aged Brie")
                 {
                     _itemUpdater.SetUpdateStrategy(new AgedBrieUpdater());
@@ -30,6 +32,10 @@ namespace csharp
                 else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
                 {
                     _itemUpdater.SetUpdateStrategy(new BackstagePassesUpdater());
+                }
+                else if (item.Name.Contains("Conjured"))
+                {
+                    _itemUpdater.SetUpdateStrategy(new ConjuredItemUpdater());
                 }
                 else
                 {

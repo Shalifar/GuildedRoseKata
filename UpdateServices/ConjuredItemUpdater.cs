@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace csharp.UpdateServices
 {
-    public class BasicUpdater : UpdateStrategy
+    public class ConjuredItemUpdater : UpdateStrategy
     {
         public override void Update(Item item)
         {
             item.SellIn--;
-            if (item.SellIn < 0)
+            if(item.SellIn < 0)
             {
-                item.Quality -= 2;
+                item.Quality -= 4;
             }
             else
             {
-                item.Quality--;
+                item.Quality -= 2;
             }
 
             if (item.Quality < 0)

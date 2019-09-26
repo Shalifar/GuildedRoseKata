@@ -403,6 +403,42 @@ namespace csharp
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
+
+            [Test]
+            public void ConjuredItem_SellInNotPassed_QualityCantDecreaseBelowZero()
+            {
+                IList<Item> Item = new List<Item>
+            {
+                new Item { Name = "Conjured Robe", SellIn = 3, Quality = 1 }
+            };
+
+                IList<Item> ExpectedItem = new List<Item>
+            {
+                new Item { Name = "Conjured Robe", SellIn = 2, Quality = 0 }
+            };
+
+                GildedRose app = new GildedRose(Item);
+                app.UpdateQuality();
+                Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
+            }
+
+            [Test]
+            public void ConjuredItem_SellInPassed_QualityCantDecreaseBelowZero()
+            {
+                IList<Item> Item = new List<Item>
+            {
+                new Item { Name = "Conjured Robe", SellIn = 0, Quality = 3 }
+            };
+
+                IList<Item> ExpectedItem = new List<Item>
+            {
+                new Item { Name = "Conjured Robe", SellIn = -1, Quality = 0 }
+            };
+
+                GildedRose app = new GildedRose(Item);
+                app.UpdateQuality();
+                Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
+            }
         }
     }
 }
