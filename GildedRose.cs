@@ -16,12 +16,12 @@ namespace csharp
 
         public void UpdateQuality()
         {
-            foreach(var item in Items)
+            foreach (var item in Items)
             {
                 //Not switch in order to use Contains
 
                 //It is not stated, but if the List is big, it may be worth to group it by name, in this case it is not worth it though
-                if (item.Name == "Aged Brie")
+                if (item.Name.Contains("Aged Brie"))
                 {
                     _itemUpdater.SetUpdateStrategy(new AgedBrieUpdater());
                 }

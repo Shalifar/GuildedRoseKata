@@ -297,12 +297,12 @@ namespace csharp
             {
                 IList<Item> Item = new List<Item>
             {
-                new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 4, Quality = 7 }
+                new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 5, Quality = 7 }
             };
 
                 IList<Item> ExpectedItem = new List<Item>
             {
-                new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 3, Quality = 10 }
+                new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 4, Quality = 10 }
             };
 
                 GildedRose app = new GildedRose(Item);
