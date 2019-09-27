@@ -21,7 +21,8 @@ namespace csharp
                 new Item { Name = "GenericItem2", SellIn = -2, Quality = 8}
             };
 
-            GildedRose app = new GildedRose(Item);
+            GildedRose app = new GildedRose();
+            app.SetStockItems(Item);
             app.UpdateQuality();
             Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             Assert.AreEqual(ExpectedItem[1].Quality, Item[1].Quality);
@@ -44,7 +45,8 @@ namespace csharp
                 new Item { Name = "GenericItem", SellIn = 2, Quality = 2 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -62,7 +64,8 @@ namespace csharp
                 new Item { Name = "GenericItem", SellIn = 2, Quality = 2 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].SellIn, Item[0].SellIn);
             }
@@ -80,7 +83,8 @@ namespace csharp
                 new Item { Name = "GenericItem", SellIn = 2, Quality = 0 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -98,7 +102,8 @@ namespace csharp
                 new Item { Name = "GenericItem", SellIn = -1, Quality = 0 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -116,7 +121,8 @@ namespace csharp
                 new Item { Name = "GenericItem", SellIn = -1, Quality = 3 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -138,7 +144,8 @@ namespace csharp
                 new Item { Name = "Aged Brie", SellIn = 1, Quality = 8 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].SellIn, Item[0].SellIn);
             }
@@ -156,7 +163,8 @@ namespace csharp
                 new Item { Name = "Aged Brie", SellIn = 1, Quality = 8 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -174,7 +182,8 @@ namespace csharp
                 new Item { Name = "Aged Brie", SellIn = -1, Quality = 9 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -192,7 +201,8 @@ namespace csharp
                 new Item { Name = "Aged Brie", SellIn = 1, Quality = 50 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -210,7 +220,8 @@ namespace csharp
                 new Item { Name = "Aged Brie", SellIn = -1, Quality = 50 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -232,7 +243,8 @@ namespace csharp
                 new Item { Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 7 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -250,7 +262,8 @@ namespace csharp
                 new Item { Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 7 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].SellIn, Item[0].SellIn);
             }
@@ -273,7 +286,8 @@ namespace csharp
                 new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 10, Quality = 8 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].SellIn, Item[0].SellIn);
             }
@@ -291,7 +305,8 @@ namespace csharp
                 new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 10, Quality = 8 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -309,7 +324,8 @@ namespace csharp
                 new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 8, Quality = 9 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -327,7 +343,8 @@ namespace csharp
                 new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 4, Quality = 10 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -345,7 +362,8 @@ namespace csharp
                 new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = -1, Quality = 0 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -363,7 +381,8 @@ namespace csharp
                 new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 3, Quality = 50 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -385,7 +404,8 @@ namespace csharp
                 new Item { Name = "Conjured Robe", SellIn = 2, Quality = 5 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].SellIn, Item[0].SellIn);
             }
@@ -403,7 +423,8 @@ namespace csharp
                 new Item { Name = "Conjured Robe", SellIn = 2, Quality = 5 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -421,7 +442,8 @@ namespace csharp
                 new Item { Name = "Conjured Robe", SellIn = -1, Quality = 3 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -439,7 +461,8 @@ namespace csharp
                 new Item { Name = "Conjured Robe", SellIn = 2, Quality = 0 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }
@@ -457,7 +480,8 @@ namespace csharp
                 new Item { Name = "Conjured Robe", SellIn = -1, Quality = 0 }
             };
 
-                GildedRose app = new GildedRose(Item);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
                 app.UpdateQuality();
                 Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
             }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace csharp.UpdateServices
 {
+    /// <summary>
+    /// Updates generic items
+    /// </summary>
     public class BasicUpdater : UpdateStrategy
     {
         public override void Update(Item item)

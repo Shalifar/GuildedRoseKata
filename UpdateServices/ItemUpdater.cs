@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace csharp.UpdateServices
 {
+    /// <summary>
+    /// Class responsible for Item stat updates
+    /// </summary>
     class ItemUpdater
     {
         private UpdateStrategy _updateStrategy;
 
+        /// <summary>
+        /// Method to set UpdateStrategy
+        /// </summary>
+        /// <param name="updateStrategy"></param>
         public void SetUpdateStrategy(UpdateStrategy updateStrategy)
         {
             _updateStrategy = updateStrategy;

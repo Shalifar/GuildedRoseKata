@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace csharp.UpdateServices
 {
+    /// <summary>
+    /// Updates Aged Brie items
+    /// </summary>
     public class AgedBrieUpdater : UpdateStrategy
     {
         public override void Update(Item item)

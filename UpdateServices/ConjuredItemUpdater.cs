@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace csharp.UpdateServices
 {
+    /// <summary>
+    /// Updates conjured items
+    /// </summary>
     public class ConjuredItemUpdater : UpdateStrategy
     {
         public override void Update(Item item)

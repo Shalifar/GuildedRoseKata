@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 namespace csharp
 {
     //The idea is that there may be multiple different inns
-    public interface Inn
+    public interface IGildedRose
     {
         void UpdateQuality();
+        void SetStockItems(IList<Item> items);
     }
 }

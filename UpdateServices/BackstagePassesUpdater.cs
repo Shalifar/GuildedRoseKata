@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace csharp.UpdateServices
 {
+    /// <summary>
+    /// Updates backstage passes items
+    /// </summary>
     public class BackstagePassesUpdater : UpdateStrategy
     {
         public override void Update(Item item)
