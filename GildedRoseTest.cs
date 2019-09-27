@@ -6,27 +6,32 @@ namespace csharp
     [TestFixture]
     public class GildedRoseTests
     {
-        [Test]
-        public void MultipleGenericItemsUpdated()
+        [TestFixture]
+        public class MultipleItemsTests
         {
-            IList<Item> Item = new List<Item>
+            [Test]
+            public void MultipleGenericItemsUpdated()
+            {
+                IList<Item> Item = new List<Item>
             {
                 new Item { Name = "GenericItem", SellIn = 3, Quality = 3 },
                 new Item { Name = "GenericItem2", SellIn = -1, Quality = 10}
             };
 
-            IList<Item> ExpectedItem = new List<Item>
+                IList<Item> ExpectedItem = new List<Item>
             {
                 new Item { Name = "GenericItem", SellIn = 2, Quality = 2 },
                 new Item { Name = "GenericItem2", SellIn = -2, Quality = 8}
             };
 
-            GildedRose app = new GildedRose();
-            app.SetStockItems(Item);
-            app.UpdateQuality();
-            Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
-            Assert.AreEqual(ExpectedItem[1].Quality, Item[1].Quality);
+                GildedRose app = new GildedRose();
+                app.SetStockItems(Item);
+                app.UpdateQuality();
+                Assert.AreEqual(ExpectedItem[0].Quality, Item[0].Quality);
+                Assert.AreEqual(ExpectedItem[1].Quality, Item[1].Quality);
+            }
         }
+        
 
         [TestFixture]
         public class GenericItemTests
