@@ -9,7 +9,7 @@ namespace csharp
         IList<Item> Items;
         private ItemUpdater _itemUpdater = new ItemUpdater();
 
-        //In case it is needed, new dependency classes can be injected
+        //In case it is needed, dependency classes can be injected
         public GildedRose()
         {
             

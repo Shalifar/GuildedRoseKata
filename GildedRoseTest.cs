@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace csharp
 {
-    [TestFixture]
     public class GildedRoseTests
     {
-        [TestFixture]
         public class MultipleItemsTests
         {
             [Test]
