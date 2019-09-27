@@ -38,23 +38,23 @@ namespace csharp
             //Not switch in order to use Contains
             if (itemName.Contains(SpecificItem.AgedBrie))
             {
-                updateStrategy = new AgedBrieUpdater();
+                updateStrategy = new AgedBrieUpdate();
             }
             else if (itemName.Contains(SpecificItem.Sulfuras))
             {
-                updateStrategy = new SulfurasUpdater();
+                updateStrategy = new SulfurasUpdate();
             }
             else if (itemName.Contains(SpecificItem.BackstagePasses))
             {
-                updateStrategy = new BackstagePassesUpdater();
+                updateStrategy = new BackstagePassesUpdate();
             }
             else if (itemName.Contains(SpecificItem.Conjured))
             {
-                updateStrategy = new ConjuredItemUpdater();
+                updateStrategy = new ConjuredUpdate();
             }
             else
             {
-                updateStrategy = new BasicUpdater();
+                updateStrategy = new GenericUpdate();
             }
 
             return updateStrategy;

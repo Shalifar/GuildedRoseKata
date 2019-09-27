@@ -7,35 +7,24 @@ using System.Threading.Tasks;
 namespace csharp.UpdateServices
 {
     /// <summary>
-    /// Updates backstage passes items
+    /// Updates Aged Brie items
     /// </summary>
-    public class BackstagePassesUpdater : UpdateStrategy
+    public class AgedBrieUpdate : UpdateStrategy
     {
         public override void Update(Item item)
         {
             item.SellIn--;
-
-            if (item.SellIn >= 10)
-            {
-                item.Quality++;
-            }
-            else if(item.SellIn > 5)
+            if(item.SellIn < 0)
             {
                 item.Quality += 2;
             }
-            else if(item.SellIn >=0)
-            {
-                item.Quality += 3;
-            }
             else
             {
-                item.Quality = 0;
+                item.Quality++;
             }
 
-            if(item.Quality > 50)
-            {
+            if (item.Quality > 50)
                 item.Quality = 50;
-            }            
         }
     }
 }

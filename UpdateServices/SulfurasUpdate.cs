@@ -9,7 +9,7 @@ namespace csharp.UpdateServices
     /// <summary>
     /// Updates sulfurus items
     /// </summary>
-    public class SulfurasUpdater : UpdateStrategy
+    public class SulfurasUpdate : UpdateStrategy
     {
         public override void Update(Item item)
         {

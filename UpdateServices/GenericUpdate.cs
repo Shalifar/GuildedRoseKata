@@ -9,7 +9,7 @@ namespace csharp.UpdateServices
     /// <summary>
     /// Updates generic items
     /// </summary>
-    public class BasicUpdater : UpdateStrategy
+    public class GenericUpdate : UpdateStrategy
     {
         public override void Update(Item item)
         {
