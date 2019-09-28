@@ -77,10 +77,12 @@
     <Compile Include="IGildedRose.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="StaticKeys\SpecificItem.cs" />
+    <Compile Include="UnityConfig.cs" />
     <Compile Include="UpdateServices\AgedBrieUpdate.cs" />
     <Compile Include="UpdateServices\BackstagePassesUpdate.cs" />
     <Compile Include="UpdateServices\GenericUpdate.cs" />
     <Compile Include="UpdateServices\ConjuredUpdate.cs" />
+    <Compile Include="UpdateServices\IItemUpdater.cs" />
     <Compile Include="UpdateServices\ItemUpdater.cs" />
     <Compile Include="UpdateServices\SulfurasUpdate.cs" />
     <Compile Include="UpdateServices\UpdateStrategy.cs" />

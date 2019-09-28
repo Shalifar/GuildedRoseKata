@@ -7,6 +7,8 @@ namespace csharp
     public class GildedRose : IGildedRose
     {
         IList<Item> Items;
+
+        //Can be injected via itnerface as well, but right now it is not required
         private ItemUpdater _itemUpdater = new ItemUpdater();
 
         //In case it is needed, dependency classes can be injected

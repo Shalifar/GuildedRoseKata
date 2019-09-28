@@ -7,11 +7,9 @@ namespace csharp
     public class Program
     {
         public static void Main(string[] args)
-        {
-            var container = new UnityContainer();
-            container.RegisterType<IGildedRose, GildedRose>();
-
+        { 
             Console.WriteLine("OMGHAI!");
+
             IList<Item> Items = new List<Item>{
                 new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
                 new Item {Name = "Aged Brie", SellIn = 2, Quality = 0},
@@ -39,6 +37,7 @@ namespace csharp
 				new Item {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6}
             };
 
+            var container = UnityConfig.GetUnityContainer();
             var app = container.Resolve<IGildedRose>();
             app.SetStockItems(Items);
 

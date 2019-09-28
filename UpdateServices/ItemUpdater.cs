@@ -9,7 +9,7 @@ namespace csharp.UpdateServices
     /// <summary>
     /// Class responsible for Item stat updates
     /// </summary>
-    class ItemUpdater
+    class ItemUpdater : IItemUpdater
     {
         private UpdateStrategy _updateStrategy;
 
